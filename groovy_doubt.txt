@@ -1,0 +1,8 @@
+##############################################################################-------- GROOVY Doubt ---------#######################################################
+1. Is Groovy is Pure Object Oriented Language or not?
+	If it is then why we allowed to create function outside class?
+2. In Groovy we can remove toString method just by adding @groovy.transform.ToString() so that it generate toString task by itself
+	but suppose if we want to modife toString as per our requirenment them how can i do that ?
+3. Real Time Purpose of Shebang Comment in Groovy and explain it also in details through example ?
+4. Assertion in Java and Groovy ?
+5. Grapes in Groovy ?

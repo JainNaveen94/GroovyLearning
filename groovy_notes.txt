@@ -1,0 +1,87 @@
+#################################################################------GROOVY (Just a wrapper over JAVA)------####################################################################
+Tools Used ::
+<-------------->
+1. JDK need to be install.(Set also as Environment Variable)
+2. groovy need to be installed.(Set also as Environment Variable)
+3. JDKMAN - tools such as nmp which help in installing, managing, switching between jdks.
+
+**************************************************************************************************************************************************************************
+Groovy Shell (groovysh) ::
+<----------------------------->
+Note Point :: 
+	1. groovysh - command should be used in cmd to open groovyshell to perform programming or scripting task (Just to Play Task without save them actually).
+	2. After enter into the Groovy Shell, we can use following command ::
+		2.1 :h or :help -> to get help from Groovy shell.
+		2.2 :clear -> to clear the terminal or class which we created already.
+
+*************************************************************************************************************************************************************************
+Groovy Compiler (groovyc)::
+<------------------------------>
+Steps ::
+	1. In this, first we have to Create a Groovy File having Extension ".groovy" and then write & save the code in it.
+	2. Then Through the Use of Groovy Compiler we can compile the Saved file to convert that groovy File (.groovy) to byte code (.class) file.
+	3. After Successful Complilation of file, a new file with .class extension is created and we can run it through "groovy" command.
+		Note:: 	groovyc <file_name>.groovy   		{For Compilation of groovy file}
+			groovy <file_name> or <file_name>.class {for Running the byte code file}
+Note Point ::
+	1. When we compile the Groovy File having ".groovy" extension then that file is being compiled and converted into new byte code file having extension ".class".
+	2. That Byte code file compiled through groovy compiler can also being run by java runtime environment or by java.
+
+*************************************************************************************************************************************************************************
+Groovy Console (groovyconsole) ::
+<----------------------------------->
+	1. It is nothing but but the kind of special console or IDE provided by the groovy itself to perform the programming or scripting.
+	2. It has various special features and to open it just use groovyconsole <name> {here, name is optional}
+
+*************************************************************************************************************************************************************************
+Basic Groovy Note Points :: 
+<------------------------------------>
+	1. Groovy is Just one wrapper over Java.
+	2. In Groovy some of the Basic Packages are bydefault imported (which is not bydefault imported in Java) such as lang, util etc...
+	3. Groovy Keyword are same as that of hava keyword with some new additions such as 
+	4. Commants in Java and Groovy are same with one new addition which is "Shebang comment". (read it from google)
+	5. A Groovy Script is any Groovy Code which is not enclosed in a class file Explicitly 
+	   but there is a class which is create by the groovy internally for script with some required import statements and put our code into its run Method.
+		For Example :: you can use any script with ACT browser to check that
+	6. In Groovy, autoboxing (converting a primitive type to its wrapper Type for example :: int to Integer) is done automatically by groovy itself so any primitive
+	   Type is converted to its respective Wrapper Class Type by groovy itself.
+
+*************************************************************************************************************************************************************************
+Groovy Classes ::
+<----------------------------------->
+Note Points ::
+	1. Unlike Java in which the file name and the class name should be similer is necessary but in groovy it is not neccessary 
+	   but good programing Convention says it shoould be the same.
+	2. Same As Java, In Groovy also if we create two or more then two classes in single file then on compilation 
+	   there separate class file for each class is created by compiler.
+	3. In Groovy, a file is treated either as a script file or a class file so if we try to perform both the task into a same file 
+	   such that class name and filename are same
+	   then it will throw error on compilation as it try to create a two class file with same name which is not possible.
+		For Example :: 	class Person { // Some Class Code Here }
+				def person = new Person()
+			==> when done the above into Person.groovy file and compile it, it will throw an error.
+	   Solution :: 
+	<---------------->
+	====> Solution of above problem is that the file name and class name are different so that Groovy treated it as complete script file.
+	      For Example :: class Persons { // Some Class Code Here }
+			     def persons = new Persons()
+			==> here, file name is Person but class name is Persons so it is successfully compiled and working fine as a script File.
+
+
+*************************************************************************************************************************************************************************
+Groovy Control Structure ::
+<----------------------------------->
+Note Point ::
+	1. Most of the Control Structure of Groovy and Java are similar syntatically excet some such as for or foreach(which is each in groovy).
+	2. Empty String or null String Object bydefault treated as false while checking in conditional Control Structure.
+
+*************************************************************************************************************************************************************************
+Groovy AST Transformation (Abstract Syntax Tree Transformation)::
+<------------------------------------------------------------------------------>
+AST transformation is nothing but the usage of predefined annotation (meta Programming) to perform some common logics which we are return through our code.
+	for example ::
+		1. In Java, for each class we have to override the toString method to convert the object in String Format 
+		   but in groovy for the same task we have a  AST Transformation, i.e., "groovy.transform.ToString", which we had put at top of class defination.
+		2. In Java, to make class immuatable we have to write a logic for it such as each property should be private final,
+		   but in groovy for the same task we have a AST Transformation, i.e., "groovy.transform.Immutable", which we had put at top of class defination.
+
