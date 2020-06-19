@@ -6,3 +6,4 @@
 3. Real Time Purpose of Shebang Comment in Groovy and explain it also in details through example ?
 4. Assertion in Java and Groovy ?
 5. Grapes in Groovy ?
+6. find() vs new in safe navigation operator ?

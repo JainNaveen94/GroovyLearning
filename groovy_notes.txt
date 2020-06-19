@@ -44,7 +44,7 @@ Basic Groovy Note Points ::
 	   but there is a class which is create by the groovy internally for script with some required import statements and put our code into its run Method.
 		For Example :: you can use any script with ACT browser to check that
 	6. In Groovy, autoboxing (converting a primitive type to its wrapper Type for example :: int to Integer) is done automatically by groovy itself so any primitive
-	   Type is converted to its respective Wrapper Class Type by groovy itself.
+	   Type is converted to its respective Wrapper Class Type by groovy itself. Therefore every type here is not a primitive either we declare it primitive or not.
 
 *************************************************************************************************************************************************************************
 Groovy Classes ::
