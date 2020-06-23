@@ -47,6 +47,18 @@ Basic Groovy Note Points ::
 	   Type is converted to its respective Wrapper Class Type by groovy itself. Therefore every type here is not a primitive either we declare it primitive or not.
 
 *************************************************************************************************************************************************************************
+Groovy Optional Type :: 
+<------------------------------------>
+1. In a Groovy we have a feature that we can define Optional Type to any variable such that its type now will depend upon the value assigned to that optional type variable.
+2. We can assign the different different Values again and again to specifed optional type variable such that on every assignement it type get change as per value type.
+3. we can define Optional Type in Groovy by using "def" keyword.
+	For Example :: 	def a
+			a = 10			===> Integer Type
+			a = "10"		===> String Type
+			a = true		===> Boolean Type
+
+
+*************************************************************************************************************************************************************************
 Groovy Classes ::
 <----------------------------------->
 Note Points ::
@@ -76,6 +88,27 @@ Note Point ::
 	2. Empty String or null String Object bydefault treated as false while checking in conditional Control Structure.
 
 *************************************************************************************************************************************************************************
+Groovy Operators ::
+<----------------------------------->
+Note Points:: 
+	1. most of the Operator in Java and Groovy are similar such as 
+		1.1. Assignment Operators, 
+		1.2. Ternary Operator, 
+		1.3. Logical Operator, 
+		1.4. Comparasion Operator,
+		1.5. Arthimetic Operator etc
+	2. There Are Some Special Operator Which is newly define in Groovy Itself which are explained below:
+		2.1 Object Operator ( Safe Navigation Operator):: it is used to ingnore NullPointerException by first checking the Object is null or not 
+		    before accessing its properties or methods.
+			For Example :
+			(--------------)
+			def person = null    	===> Here, find will return null to the Object
+			def name = person?.name     			===> Here is the Safe Navigation Operator Used              
+			assert name == null  				===> Return nothing as assertion is true
+
+
+
+*************************************************************************************************************************************************************************
 Groovy AST Transformation (Abstract Syntax Tree Transformation)::
 <------------------------------------------------------------------------------>
 AST transformation is nothing but the usage of predefined annotation (meta Programming) to perform some common logics which we are return through our code.
@@ -84,4 +117,23 @@ AST transformation is nothing but the usage of predefined annotation (meta Progr
 		   but in groovy for the same task we have a  AST Transformation, i.e., "groovy.transform.ToString", which we had put at top of class defination.
 		2. In Java, to make class immuatable we have to write a logic for it such as each property should be private final,
 		   but in groovy for the same task we have a AST Transformation, i.e., "groovy.transform.Immutable", which we had put at top of class defination.
+
+*************************************************************************************************************************************************************************
+Groovy Operator Overloading ::
+<--------------------------------->
+ 	1. As Groovy is Pure Object Oriented Language so it also provide a feature of Operator Overloading.
+	2. Operator Overloading is feature in which we basically overload the Operator logic as per our requirenment.
+	3. Groovy Internally Use Operator Overloading in various classes or packages.
+		For Example :: 
+			3.1. In Number Class + Operator has a Overloaded method called "<value>.plus(<othervalue>)" which overloaded as per Number class Logic.
+			     But In String Class + Operator has its own logic for the method plus to concatinate the String "<string1>.plus(<string2>)".
+				so In Number Class ===> 10.plus(10) = 20
+				   In String Class ===> "10".plus("10") = 1010
+	4. We Can also overload this and other operator in User defined class as per our requirenment and logic.
+
+*************************************************************************************************************************************************************************
+Groovy String ::
+<---------------->
+
+
 

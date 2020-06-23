@@ -1,13 +1,13 @@
 package com.navtech.script.operators
 
-class Person {
-    String name
-}
+//class Person {
+//    String name
+//}
 
 // Find will return null to the person object
 //def person = null
-//def person = Person.find()
-def person = new Person()
+def person = Person.find()
+//def person = new Person()
 
 // Printing Person Object person on console
 println person
@@ -19,4 +19,4 @@ def name = person?.name
 println "$name"
 
 // Check that property is null or not through assertion
-assert name == null
+//assert name == null
