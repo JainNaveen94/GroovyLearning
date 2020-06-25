@@ -110,7 +110,7 @@ Note Points::
 
 *************************************************************************************************************************************************************************
 Groovy AST Transformation (Abstract Syntax Tree Transformation)::
-<------------------------------------------------------------------------------>
+<-------------------------------------------------------------------->
 AST transformation is nothing but the usage of predefined annotation (meta Programming) to perform some common logics which we are return through our code.
 	for example ::
 		1. In Java, for each class we have to override the toString method to convert the object in String Format 
@@ -134,6 +134,52 @@ Groovy Operator Overloading ::
 *************************************************************************************************************************************************************************
 Groovy String ::
 <---------------->
+	1.1 In Groovy We can Declare a String by Using Both Double Quote ("<String>") or Single Quote ('<String>') 
+	   {But in Java We can Declare String by Using Only Double Quote ("<string>") as single Quote is Specific for Character}.
+		For Example ::  String str1 = "Hello"		==> Possible in Both Java and Groovy
+				String str2 = 'Hello'		==> Only Possible in Groovy as Java Gives Run Time Error
+
+	1.2 In Groovy or java if we want to Describe Directory address or File Address or Folder Address or link etc through string
+	    then we cannot describe it as its.
+		For Example :: String str = "D:\groovyLearing\string"		==> it will give compile time error as \ is already a white space in groovy or java
+	    
+	    solution for the same is,
+		1. Using \\ instead of \.
+			For Example :: String str = "D:\\groovyLearing\\string"
+		2. Under $/<string>/$ without "".
+			For Example :: String str = $/D:\groovyLearing\string/$
+
+Groovy String Interpolation or Evaluation ::
+<---------------------------------------------->
+
+	2.1 In Groovy We have a new Way for String Interpolation $ evaluation and old one is also Working.
+	   {please Note : But the New Way is not working in Java only in Groovy}
+		For Example ::  String str3 = "Hello"
+				println "Naveen! " + str3 + " Bro. " + (1+1)		==> old way working in both java and groovy
+				println "Naveen! $str3 Bro. ${1+1}"			==> New Way only work in groovy
+				
+	2.2 String Interpolation & Evaluation is only possible in "<String>" but not possible through '<String>' (as it treat is completely as string).
+		For Example :: 	println "${1+1}" 					===> It Display 2
+				println '${1+1}'					===> It Display ${1+1}
+
+Groovy Multiline String with Interpolation or Evaluation ::
+<-------------------------------------------------------------->
+
+	3.1 In Groovy Multiline String is Also Possible through '''<Multiline String>''' or """<Multiline String>""" 
+	3.2 In Mutliline String Interpolation or Evaluation is also being done but only through """<Multiline String>""" not through '''<Multiline String>'''.
+		For Example ::
+			 ==> println """					| ==> println '''
+					    ${1+1+1}				|		${1+1+1}
+					    Hello How are You?			|		Hello How are You?
+				           """					|	      '''
+				In this Interpolation and evaluation done	|  In this Interpolation and evaluation is not done and treated as normal String
+				result :: 3					|  result :: ${1+1+1}
+					  Hello How are You?			|	     Hello How are You?
+
+*************************************************************************************************************************************************************************
+Groovy Regular Expression ::
+<------------------------------->
+
 
 
 

@@ -36,6 +36,15 @@ but in Groovy same thing is done by just adding the @groovy.tranform.ToString an
 8. In Java if two floats are involved in operation then the result would be float but
 In Groovy if two floats are involved in operation then the result would be double always.
 
+9. In Java There is no Support For Operator Overloading but in Groovy Operator Overloading is there.
+	for Example :: Please Refer Code in Operator -> Operator_Overloading Folder.
+
+10. In Java '' is used for characters and "" is used for String, so if we put String in '' then Java gives error
+but in Groovy if we Write String in '' then it will execute properly and provided expected Result.
+	For ex: String s1 = '10';
+		String s2 = '20';
+		System.out.println(s1 + s2);  it will execute in groovy but not in java.
+
 *********************************************************************************************************************************************************************
 
 
